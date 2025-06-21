@@ -18,7 +18,7 @@ This solution is a fully automated pipeline that ingests raw customer data, mask
 
 This diagram was generated using a text-to-diagram tool. You can find the prompt used in the section below.
 
-![Architecture Diagram](docs/architecture.png) 
+![Architecture Diagram](https://github.com/MukeshPyatla/MLOPS-Secure-Churn/blob/main/src/data/diagram-export-6-21-2025-4_02_16-PM.png)
 
 ## 3. Tech Stack
 - **Cloud**: Microsoft Azure
@@ -49,8 +49,7 @@ This project goes beyond just prediction. It implements model explainability usi
 
 * **SHAP Summary Plot**: The following plot visualizes the impact of each feature on the model's output. Red dots represent high feature values, and blue dots represent low feature values. For example, high tenure (red dots on the 'TenureMonths' row) has a strong negative (blue) impact on churn, meaning it reduces the likelihood of churning.
 
-    *(This is where you would paste the shap_summary.png artifact from your MLflow run)*
-    ![SHAP Summary Plot](docs/shap_summary.png)
+    ![SHAP Summary Plot](https://github.com/MukeshPyatla/MLOPS-Secure-Churn/blob/main/src/data/diagram-export-6-21-2025-4_06_17-PM.png)
 
 * **Business Impact**: The insights from the SHAP analysis are directly actionable. Instead of using generic discounts, the marketing team can now design targeted retention campaigns. For example, they can automatically offer a 'One year' contract upgrade to high-value customers who are still on a 'Month-to-month' plan after 6 months. This data-driven approach can significantly reduce customer attrition and increase Customer Lifetime Value (CLV).
 
