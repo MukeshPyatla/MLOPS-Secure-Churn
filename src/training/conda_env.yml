@@ -1,0 +1,17 @@
+name: secure-churn-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - azure-ai-ml
+    - azure-identity
+    - mltable
+    - pandas==1.5.3
+    - scikit-learn==1.2.2 # Pin version for SHAP compatibility
+    - xgboost
+    - shap==0.41.0 # Pin version
+    - pyarrow
+    - mlflow
+    - matplotlib

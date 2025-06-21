@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+azure-identity
+azure-ai-ml
+pyarrow
+faker
+# Add shap for model explainability
+shap
