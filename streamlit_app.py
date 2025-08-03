@@ -385,7 +385,7 @@ def show_model_predictions():
         })
         
         # Make prediction
-        churn_prob = model.predict_proba(features)[0][1]
+        churn_prob = float(model.predict_proba(features)[0][1])  # Convert to Python float
         prediction = model.predict(features)[0]
         
         st.markdown("### 📊 Prediction Results")
@@ -478,7 +478,7 @@ def show_model_explainability():
     st.pyplot(fig)
     
     # Prediction details
-    pred_prob = model.predict_proba(sample_features)[0][1]
+    pred_prob = float(model.predict_proba(sample_features)[0][1])  # Convert to Python float
     st.markdown(f"**Prediction:** {pred_prob:.1%} churn probability")
     st.markdown(f"**Actual:** {'Churned' if actual_churn == 1 else 'Retained'}")
 
