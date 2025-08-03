@@ -38,6 +38,12 @@ This diagram was generated using a text-to-diagram tool. You can find the prompt
 ### Explainable AI (XAI)
 This project goes beyond just prediction. It implements model explainability using **SHAP (SHapley Additive exPlanations)** to understand the key drivers behind each churn prediction. This crucial step translates a black-box model into actionable business intelligence.
 
+### Interactive Web Application
+- **Streamlit Dashboard**: A comprehensive web application showcasing all aspects of the MLOps pipeline
+- **Real-time Predictions**: Interactive customer churn prediction with instant results
+- **Visual Analytics**: Beautiful charts and graphs for data exploration and model insights
+- **Business Intelligence**: Actionable recommendations and ROI analysis for stakeholders
+
 ## 5. Results and Findings
 
 * **Predictive Accuracy**: The XGBoost model achieved an **F1-score of 0.82** on the held-out test set. This strong score indicates an effective balance between correctly identifying potential churners (recall) and not misclassifying too many loyal customers (precision).
@@ -54,8 +60,21 @@ This project goes beyond just prediction. It implements model explainability usi
 * **Business Impact**: The insights from the SHAP analysis are directly actionable. Instead of using generic discounts, the marketing team can now design targeted retention campaigns. For example, they can automatically offer a 'One year' contract upgrade to high-value customers who are still on a 'Month-to-month' plan after 6 months. This data-driven approach can significantly reduce customer attrition and increase Customer Lifetime Value (CLV).
 
 ## 6. How to Run This Project
+
+### Option A: Local Development
 1.  **Clone the repository.**
 2.  **Configure `AZURE_CREDENTIALS`** as a secret in your GitHub repository settings.
 3.  **Customize Terraform Variables:** Ensure the `storage_account_name` in `infrastructure/azure/variables.tf` is globally unique. You can do this by changing the default value.
 4.  **Push to GitHub:** Commit and push your code to the `main` branch to trigger the automated pipeline via GitHub Actions.
 5.  **Review Results:** Once the pipeline completes, navigate to your Azure ML Workspace to find the registered model and view the artifacts (including the SHAP plot) in the MLflow experiment tracking section.
+
+### Option B: Streamlit Cloud Deployment (Recommended for Demo)
+1. **Deploy to Streamlit Cloud**: Follow the detailed guide in [`DEPLOYMENT.md`](DEPLOYMENT.md)
+2. **Access the App**: Your interactive dashboard will be available at your Streamlit Cloud URL
+3. **Features Available**:
+   - 📊 Interactive data exploration
+   - 🤖 Real-time churn predictions
+   - 🔍 Model explainability with SHAP
+   - 📈 Business insights and recommendations
+
+**Quick Deploy**: Visit [share.streamlit.io](https://share.streamlit.io) and connect your GitHub repository!

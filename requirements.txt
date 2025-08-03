@@ -7,3 +7,11 @@ pyarrow
 faker
 # Add shap for model explainability
 shap
+# Streamlit and visualization dependencies
+streamlit
+plotly
+matplotlib
+seaborn
+xgboost
+# Additional dependencies for better performance
+joblib
